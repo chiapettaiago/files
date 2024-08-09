@@ -6,7 +6,6 @@
     <title>Meu Tesouro - Arquivos</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
-        /* Estilos adicionais para centralizar o card verticalmente */
         .full-height {
             height: 100vh;
         }
@@ -31,7 +30,10 @@
                 {% if download_link %}
                 <div class="alert alert-success mt-4 text-center">
                     <p>Arquivo enviado com sucesso! Use o link abaixo para compartilhar:</p>
-                    <a href="{{ download_link }}" class="btn btn-success">{{ download_link }}</a>
+                    <a href="{{ download_link }}" class="btn btn-success btn-block mb-2">{{ download_link }}</a>
+
+                    <p>Ou escaneie o QR Code:</p>
+                    <img src="{{ url_for('qrcode_file', filename=qr_code) }}" alt="QR Code" class="img-fluid">
                 </div>
                 {% endif %}
             </div>
