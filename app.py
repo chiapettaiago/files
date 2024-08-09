@@ -4,7 +4,7 @@ from flask import Flask, render_template, request, redirect, url_for, send_from_
 
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = 'static/uploads'
-app.config['MAX_CONTENT_LENGTH'] = 2048 * 1024 * 1024  # Limite de 2GB por arquivo
+app.config['MAX_CONTENT_LENGTH'] = 512 * 1024 * 1024  # Limite de 2GB por arquivo
 
 # Crie a pasta de uploads, se não existir
 if not os.path.exists(app.config['UPLOAD_FOLDER']):

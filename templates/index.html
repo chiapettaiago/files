@@ -3,14 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Upload de Arquivos</title>
+    <title>Meu Tesouro - Arquivos</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Estilos adicionais para centralizar o card verticalmente */
+        .full-height {
+            height: 100vh;
+        }
+    </style>
 </head>
 <body>
-    <div class="container mt-5">
-        <div class="card shadow">
+    <div class="container d-flex justify-content-center align-items-center full-height">
+        <div class="card shadow" style="width: 100%; max-width: 500px;">
             <div class="card-body">
-                <h1 class="card-title text-center">Upload de Arquivos</h1>
+                <h1 class="card-title text-center">Arquivos</h1>
+                <h5 class="text-center">Suba arquivos com o tamanho máximo de 512MB</h5>
                 <form method="POST" enctype="multipart/form-data">
                     <div class="form-group">
                         <label for="file">Escolha um arquivo para fazer upload:</label>
